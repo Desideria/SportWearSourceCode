@@ -1,6 +1,7 @@
 package edu.zju.huyifeng.sportwear.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -42,15 +43,43 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
         mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
     }
 
+    /**
+     * 改变toolbar的菜单项
+     */
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         menu.clear();
         switch (menu_position) {
             case 0:
                 getMenuInflater().inflate(R.menu.menu_main, menu);
+                mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                        switch (menuItem.getItemId()) {
+                            case R.id.action_month:
+                                Intent intent = new Intent();
+                                intent.setClass(MainActivity.this, MonthNoteActivity.class);
+                                startActivity(intent);
+
+                        }
+                        return false;
+                    }
+                });
                 break;
             case 1:
                 getMenuInflater().inflate(R.menu.menu_friend, menu);
+                mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                        switch (menuItem.getItemId()) {
+                            case R.id.action_add_friend:
+                                Intent intent = new Intent();
+                                intent.setClass(MainActivity.this, AddFriendActivity.class);
+                                startActivity(intent);
+                        }
+                        return false;
+                    }
+                });
                 break;
         }
         return super.onPrepareOptionsMenu(menu);
@@ -90,11 +119,9 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
                         .replace(R.id.container, trainFragment).commit();
                 break;
             case R.id.iv_user_photo:
-                SportNoteFragment sportNoteFragment2 = new SportNoteFragment();
-
-                sportNoteFragment2.setArguments(bundle);
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, sportNoteFragment2).commit();
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, PersonActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
@@ -115,8 +142,6 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
         switch (number) {
             case 0:
                 mToolbar.setTitle(getString(R.string.menu_sport_note));
-
-                invalidateOptionsMenu();
                 break;
             case 1:
                 mToolbar.setTitle(getString(R.string.menu_friends));

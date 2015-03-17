@@ -5,6 +5,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Build;
@@ -64,7 +65,7 @@ public class SportNoteFragment extends Fragment {
         @Override
         public void onClick(View v) {
 
-            switch (v.getId()){
+            switch (v.getId()) {
                 case R.id.iv_circle_drawable:
                     if (currentAnimation != null) {
                         currentAnimation.cancel();
@@ -80,11 +81,18 @@ public class SportNoteFragment extends Fragment {
                     currentAnimation = prepareStyle3Animation(ratio);
                     currentAnimation.start();
                     rlytRun.setVisibility(View.GONE);
-
+//                    RelativeLayout.LayoutParams lp1 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 800);
+//                    lp1.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+//                    mBarChart.setLayoutParams(lp1);
+//                    mBarChart.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 800));
+                    updateBarChart(mNewBarValues);
                     break;
                 case R.id.btn_pre:
                     break;
                 case R.id.rlyt_walk:
+                    Intent intent = new Intent();
+                    intent.setClass(getActivity(), SportDetailActivity.class);
+                    startActivity(intent);
                     break;
                 case R.id.rlyt_run:
                     break;
@@ -134,7 +142,8 @@ public class SportNoteFragment extends Fragment {
     private final static int BAR_MAX = 10;
     private final static int BAR_MIN = 0;
     private final static String[] barLabels = {"YAK", "ANT", "GNU", "OWL", "APE", "JAY", "COD"};
-    private final static float[] barValues[] = {{5f, 6f, 2f, 2f, 9f, 3f, 4f},{5f, 6f, 2f, 2f, 9f, 3f, 5f},{5f, 6f, 2f, 2f, 9f, 3f, 6f},{5f, 6f, 2f, 2f, 9f, 3f, 6f}};
+    private final static float[] mBarValues[] = {{5f, 6f, 2f, 2f, 9f, 3f, 4f}, {5f, 6f, 2f, 2f, 9f, 3f, 5f}, {5f, 6f, 2f, 2f, 9f, 3f, 6f}, {5f, 6f, 2f, 2f, 9f, 3f, 6f}};
+    private final static float[] mNewBarValues[] = {{5f, 6f, 2f, 2f, 9f, 3f, 4f}, {6f, 6f, 2f, 2f, 9f, 3f, 5f}, {7f, 6f, 2f, 2f, 9f, 3f, 6f}, {8f, 6f, 2f, 2f, 9f, 3f, 6f}};
     private static BarChartView mBarChart;
     private Paint mBarGridPaint;
     private TextView mBarTooltip;
@@ -156,7 +165,6 @@ public class SportNoteFragment extends Fragment {
 //                dismissBarTooltip(-1, -1, null);
         }
     };
-
 
 
     @Override
@@ -192,6 +200,7 @@ public class SportNoteFragment extends Fragment {
         currentAnimation.start();
         hookUpListeners();
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_sport_note, container, false);
@@ -217,7 +226,7 @@ public class SportNoteFragment extends Fragment {
         ibNextDay.setOnClickListener(listener);
 
         initBarChart();
-        updateBarChart();
+        updateBarChart(mBarValues);
     }
 
     @Override
@@ -247,7 +256,7 @@ public class SportNoteFragment extends Fragment {
     }
 
 
-    private void updateBarChart() {
+    private void updateBarChart(float[][] barValues) {
 
         mBarChart.reset();
 
@@ -396,6 +405,7 @@ public class SportNoteFragment extends Fragment {
         animation.playSequentially(secondBounce, thirdBounce);
         return animation;
     }
+
     /**
      * Style 3 animation will turn a 3/4 animation with Anticipate/Overshoot interpolation to a
      * blank waiting - like state, wait for 2 seconds then return to the original state
@@ -413,6 +423,7 @@ public class SportNoteFragment extends Fragment {
         animation.playTogether(invertedProgress);
         return animation;
     }
+
     /**
      * Style 3 animation will turn a 3/4 animation with Anticipate/Overshoot interpolation to a
      * blank waiting - like state, wait for 2 seconds then return to the original state
@@ -422,7 +433,7 @@ public class SportNoteFragment extends Fragment {
     private Animator prepareStyle3Animation(float ratio) {
         AnimatorSet animation = new AnimatorSet();
 
-        ObjectAnimator progressAnimation = ObjectAnimator.ofFloat(drawable, CircularProgressDrawable.PROGRESS_PROPERTY, ratio, 0f);
+        ObjectAnimator progressAnimation = ObjectAnimator.ofFloat(drawable, CircularProgressDrawable.PROGRESS_PROPERTY, 0.75f, 0f);
         progressAnimation.setDuration(600);
         progressAnimation.setInterpolator(new AnticipateInterpolator());
 

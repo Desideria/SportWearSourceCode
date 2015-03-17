@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:gravity="center_horizontal">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_marginTop="5dp">
+
         <ImageButton
             android:id="@+id/btn_pre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_pre"/>
+            android:background="@drawable/btn_pre" />
+
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="150dp"
@@ -22,73 +26,86 @@
             android:text="@string/today"
             android:textColor="@color/button_material_dark"
             android:gravity="center"
-            android:textSize="18dp"/>
+            android:textSize="18dp" />
+
         <ImageButton
             android:id="@+id/btn_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_next"/>
-        </LinearLayout>
+            android:background="@drawable/btn_next" />
+    </LinearLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/iv_circle_drawable"
             android:layout_width="match_parent"
-            android:layout_height="200dp"/>
+            android:layout_height="200dp" />
+
         <LinearLayout
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center"
             android:gravity="center">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/calorie"
                 android:textColor="@color/white"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3000"
                 android:textSize="24sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
+
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="1dp"
-                android:background="@color/white"/>
+                android:background="@color/white" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4000"
                 android:textSize="20sp"
-                android:textColor="@color/white"/>
-            </LinearLayout>
+                android:textColor="@color/white" />
+        </LinearLayout>
 
-        </FrameLayout>
+    </FrameLayout>
+
     <RelativeLayout
         android:id="@+id/rlyt_walk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/iv_walk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_walk"/>
+            android:background="@drawable/ic_walk" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/iv_walk"
             android:layout_centerVertical="true"
             android:text="@string/walk"
-            android:textColor="@color/button_material_dark"/>
+            android:textColor="@color/button_material_dark" />
+
         <ImageView
             android:id="@+id/iv_walk_more_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_more_info"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true" />
+
         <TextView
             android:id="@+id/tv_walk_cal"
             android:layout_width="wrap_content"
@@ -96,31 +113,36 @@
             android:layout_toLeftOf="@id/iv_walk_more_info"
             android:layout_centerVertical="true"
             android:textColor="@color/button_material_dark"
-            android:text="3000Cal   2h 15min"/>
+            android:text="3000Cal   2h 15min" />
 
-        </RelativeLayout>
+    </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/rlyt_run"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/iv_run"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_walk"/>
+            android:background="@drawable/ic_walk" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/iv_run"
             android:layout_centerVertical="true"
             android:text="@string/run"
-            android:textColor="@color/button_material_dark"/>
+            android:textColor="@color/button_material_dark" />
+
         <ImageView
             android:id="@+id/iv_run_more_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_more_info"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true" />
+
         <TextView
             android:id="@+id/tv_run_cal"
             android:layout_width="wrap_content"
@@ -128,31 +150,36 @@
             android:layout_toLeftOf="@id/iv_run_more_info"
             android:layout_centerVertical="true"
             android:textColor="@color/button_material_dark"
-            android:text="3000Cal   2h 15min"/>
+            android:text="3000Cal   2h 15min" />
 
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/rlyt_bike"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/iv_bike"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_walk"/>
+            android:background="@drawable/ic_walk" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/iv_bike"
             android:layout_centerVertical="true"
             android:text="@string/bike"
-            android:textColor="@color/button_material_dark"/>
+            android:textColor="@color/button_material_dark" />
+
         <ImageView
             android:id="@+id/iv_bike_more_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_more_info"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true" />
+
         <TextView
             android:id="@+id/tv_bike_cal"
             android:layout_width="wrap_content"
@@ -160,11 +187,11 @@
             android:layout_toLeftOf="@id/iv_bike_more_info"
             android:layout_centerVertical="true"
             android:textColor="@color/button_material_dark"
-            android:text="3000Cal   2h 15min"/>
+            android:text="3000Cal   2h 15min" />
 
     </RelativeLayout>
-    <com.db.chart.view.BarChartView
-        xmlns:chart="http://schemas.android.com/apk/res-auto"
+
+    <com.db.chart.view.BarChartView xmlns:chart="http://schemas.android.com/apk/res-auto"
         android:id="@+id/barchart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -176,9 +203,7 @@
         android:background="@color/white"
         chart:chart_axisColor="@color/line_grey"
         chart:chart_labelColor="@color/red"
-        chart:chart_axisBorderSpacing="25dp"
-        />
-
+        chart:chart_axisBorderSpacing="25dp" />
 
 
 </LinearLayout>

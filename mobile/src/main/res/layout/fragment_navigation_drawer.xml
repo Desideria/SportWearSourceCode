@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,13 +11,15 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_user_photo"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
-            android:background="@color/material_blue_grey_800" />
+            android:src="@drawable/ic_menu_check"
+            app:border_width="2dp"
+            app:border_color="#FF000000" />
 
         <TextView
             android:id="@+id/tv_username"
@@ -50,7 +53,6 @@
         android:layout_height="1dp"
         android:layout_marginTop="50dp"
         android:background="@color/line_grey" />
-
 
 
 </LinearLayout>
