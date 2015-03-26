@@ -21,4 +21,22 @@
     <string name="walk">步行</string>
     <string name="run">跑步</string>
     <string name="bike">骑行</string>
+
+    <!--train-->
+
+
+
+
+
+    <string name="steps">steps</string>
+    <string name="kilometers">kilometers</string>
+    <string name="miles">miles</string>
+    <string name="steps_per_minute">steps / minute</string>
+    <string name="kilometers_per_hour">kilometers / hour</string>
+    <string name="miles_per_hour">miles / hour</string>
+    <string name="calories_burned">calories burned</string>
+    <string name="centimeters">centimeters</string>
+    <string name="inches">inches</string>
+    <string name="kilograms">kilograms</string>
+    <string name="pounds">pounds</string>
 </resources>

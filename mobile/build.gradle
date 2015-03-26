@@ -40,5 +40,8 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:21.0.0'
     compile 'de.hdodenhof:circleimageview:1.2.2'
     compile project(':extended-list-library')
+    compile project(':wave-view-library')
+    compile project(':teleport-library')
     compile 'com.akexorcist:RoundCornerProgressBar:1.1.0'
+    compile 'com.daimajia.numberprogressbar:library:1.2@aar'
 }

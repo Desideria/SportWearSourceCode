@@ -1,1 +1,1 @@
-include ':mobile', ':wear', 'extended-list-library'
+include ':mobile', ':wear', 'extended-list-library', 'wave-view-library', 'teleport-library'

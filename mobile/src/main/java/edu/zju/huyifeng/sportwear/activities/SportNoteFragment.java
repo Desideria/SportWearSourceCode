@@ -81,10 +81,6 @@ public class SportNoteFragment extends Fragment {
                     currentAnimation = prepareStyle3Animation(ratio);
                     currentAnimation.start();
                     rlytRun.setVisibility(View.GONE);
-//                    RelativeLayout.LayoutParams lp1 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 800);
-//                    lp1.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-//                    mBarChart.setLayoutParams(lp1);
-//                    mBarChart.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 800));
                     updateBarChart(mNewBarValues);
                     break;
                 case R.id.btn_pre:

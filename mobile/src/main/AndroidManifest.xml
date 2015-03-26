@@ -33,12 +33,24 @@
         <activity
             android:name="edu.zju.huyifeng.sportwear.activities.SportDetailActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="edu.zju.huyifeng.sportwear.activities.AddTrainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="edu.zju.huyifeng.sportwear.activities.TrainDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="edu.zju.huyifeng.sportwear.activities.Pedometer"
+            android:screenOrientation="portrait"></activity>
 
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" >
         </service>
+        <service android:name="edu.zju.huyifeng.sportwear.service.StepService"/>
+
+        <service android:name="edu.zju.huyifeng.sportwear.service.LocationTraceService"/>
     </application>
 
     <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >

@@ -5,4 +5,8 @@
     <string name="hello_round">Hello Round World!</string>
     <string name="hello_square">Hello Square World!</string>
 
+    <string name="walk">步行</string>
+    <string name="run">跑步</string>
+    <string name="bike">骑行</string>
+
 </resources>

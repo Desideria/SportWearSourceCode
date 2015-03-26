@@ -2,6 +2,55 @@
 <items version="2" >
 
     <item
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/com.daimajia.numberprogressbar/library/1.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4196173ec5799ff211761f90874802789c6cc4ac">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-ae971a14a1d5a0fdd60441bbc825fb4c7c0127c4.jar" />
+    </item>
+    <item
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-ea1d3b367caca0069543cfa20ee7fb9d8dcd5d76.jar" />
+    </item>
+    <item
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/libs/ormlite-core-4.48.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/ormlite-core-4.48-b8a3e68bcc347442b56f52a68ddc1abef3be9aa4.jar" />
+    </item>
+    <item
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/libs/locSDK_3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="09224a1883da8b5bd37e766f4fab80570d879898">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/locSDK_3.1-ba7caad3bd5766cc5c243cee08d8c3cbdc422701.jar" />
+    </item>
+    <item
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-2aac260aba5f0107838f0826d62bd5784716654c.jar" />
+    </item>
+    <item
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/williamchart-1.7.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="862312b39b3acd6c11012350a7203ea6cd2fc456">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-c8e41a24e215165492d1e967a7ed4fd23e438c9c.jar" />
+    </item>
+    <item
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/libs/BaiduLBS_Android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="56d0f557b1fbb7c245a1d783450701a809a4fe76">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/BaiduLBS_Android-6cae919e4829bd68ada48d9c8dd2f7a28afcd290.jar" />
+    </item>
+    <item
         jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -16,25 +65,18 @@
         <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-27253161405a3bc77c04b25826e58ff587df810d.jar" />
     </item>
     <item
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/SportWear/extended-list-library/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3488259b3a91c8802437f9ab2e91602d84d95503">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-12027a5c6c0a8a70cb6b179a786e6f59f9b6e579.jar" />
+    </item>
+    <item
         jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.2.2/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="803c4c913beac8f7980d680c725a40835d1d7c77">
         <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-fc7eacc045ec9b05b39a8b8bc73c4d95de19a103.jar" />
-    </item>
-    <item
-        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/SportWear/extended-list-library/unspecified/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e13a4055414e039f10e4a69f17a47bd3787fc705">
-        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-12027a5c6c0a8a70cb6b179a786e6f59f9b6e579.jar" />
-    </item>
-    <item
-        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-ea1d3b367caca0069543cfa20ee7fb9d8dcd5d76.jar" />
     </item>
     <item
         jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/com.akexorcist/RoundCornerProgressBar/1.1.0/classes.jar"
@@ -54,8 +96,15 @@
         jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/libs/xcl-charts.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="22038c1110d772c77797eb604c6a15e621f686c5">
+        sha1="3136218611aa6f7cc70ac8043e058cbe28bc4ad5">
         <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/xcl-charts-bb2344524246d4c5187fc33a11675a35a93b7b50.jar" />
+    </item>
+    <item
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/libs/ormlite-android-4.48-javadoc.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="26a1d11504853faa757c551cc6624d350adf12aa">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/ormlite-android-4.48-javadoc-637e0d07df674a9f38d90bcf2095bb233d19b7da.jar" />
     </item>
     <item
         jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/circular-progress-drawable-1.3/classes.jar"
@@ -65,6 +114,13 @@
         <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-972a34a808c916c0f5f1e6b08bcecc830f701aec.jar" />
     </item>
     <item
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/SportWear/wave-view-library/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="336327ee4d8e5cb4c0389c311a55e1eb5fad15b3">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-5240fba0066bb55f3cf0f31a82f4db8fc4b2a02c.jar" />
+    </item>
+    <item
         jar="/Users/huyifeng/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -72,32 +128,18 @@
         <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-e7c6d214fb4a31784b91cea86e8625fff9b9d198.jar" />
     </item>
     <item
-        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/classes.jar"
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/libs/ormlite-android-4.48.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2">
-        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-2aac260aba5f0107838f0826d62bd5784716654c.jar" />
+        sha1="afa06f539a4026c10b247386312aa67404b80a16">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/ormlite-android-4.48-3f5375576650893e5cb2b11ee5381cf18432a0f9.jar" />
     </item>
     <item
-        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/libs/locSDK_3.1.jar"
+        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/libs/ormlite-android-4.48-sources.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="09224a1883da8b5bd37e766f4fab80570d879898">
-        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/locSDK_3.1-ba7caad3bd5766cc5c243cee08d8c3cbdc422701.jar" />
-    </item>
-    <item
-        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/exploded-aar/williamchart-1.7.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="862312b39b3acd6c11012350a7203ea6cd2fc456">
-        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/classes-c8e41a24e215165492d1e967a7ed4fd23e438c9c.jar" />
-    </item>
-    <item
-        jar="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/libs/BaiduLBS_Android.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="56d0f557b1fbb7c245a1d783450701a809a4fe76">
-        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/BaiduLBS_Android-6cae919e4829bd68ada48d9c8dd2f7a28afcd290.jar" />
+        sha1="5bf9109f8deb3748dae81ec5bd71ba3f9b351014">
+        <dex dex="/Users/huyifeng/Documents/AndroidStudioProjects/SportWear/mobile/build/intermediates/pre-dexed/debug/ormlite-android-4.48-sources-ff3cc3475baab03ba359669c39c1991036145273.jar" />
     </item>
 
 </items>

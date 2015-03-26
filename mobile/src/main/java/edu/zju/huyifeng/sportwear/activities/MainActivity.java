@@ -14,7 +14,20 @@ import android.view.View;
 import android.widget.Toast;
 import android.support.v4.app.FragmentManager;
 
+import com.google.android.gms.wearable.DataMap;
+import com.j256.ormlite.dao.RuntimeExceptionDao;
+import com.mariux.teleport.lib.TeleportClient;
+
 import edu.zju.huyifeng.sportwear.R;
+import edu.zju.huyifeng.sportwear.constants.Constant;
+import edu.zju.huyifeng.sportwear.db.DatabaseHelper;
+import edu.zju.huyifeng.sportwear.db.bean.BikeDB;
+import edu.zju.huyifeng.sportwear.db.bean.BikeLocationDB;
+import edu.zju.huyifeng.sportwear.db.bean.RunDB;
+import edu.zju.huyifeng.sportwear.db.bean.RunLocationDB;
+import edu.zju.huyifeng.sportwear.db.bean.WalkDB;
+import edu.zju.huyifeng.sportwear.db.bean.WalkLocationDB;
+import edu.zju.huyifeng.sportwear.service.LocationTraceService;
 
 
 public class MainActivity extends ActionBarActivity implements NavigationDrawerCallbacks {
@@ -25,6 +38,18 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
     private Bundle bundle;
     private Menu menu;
     private int menu_position;
+
+    private LocationTraceService mLocationTraceService;
+
+    TeleportClient mTeleportClient;
+    TeleportClient.OnSyncDataItemTask mOnSyncDataItemTask;
+
+    private RuntimeExceptionDao<WalkDB, Integer> mWalkDao = null;
+    private RuntimeExceptionDao<RunDB, Integer> mRunDao = null;
+    private RuntimeExceptionDao<BikeDB, Integer> mBikeDao = null;
+    private WalkDB mWalkDB = null;
+    private RunDB mRunDB = null;
+    private BikeDB mBikeDB = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +66,18 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
 
         mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.fragment_drawer);
         mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
+        Intent intent = new Intent(this, LocationTraceService.class);
+        startService(intent);
+
+        //instantiate the TeleportClient with the application Context
+        mTeleportClient = new TeleportClient(this);
+
+        //Create and initialize task
+        mOnSyncDataItemTask = new SaveDataFromWear();
+
+
+        //let's set the two task to be executed when an item is synced or a message is received
+        mTeleportClient.setOnSyncDataItemTask(mOnSyncDataItemTask);
     }
 
     /**
@@ -75,6 +112,21 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
                             case R.id.action_add_friend:
                                 Intent intent = new Intent();
                                 intent.setClass(MainActivity.this, AddFriendActivity.class);
+                                startActivity(intent);
+                        }
+                        return false;
+                    }
+                });
+                break;
+            case 2:
+                getMenuInflater().inflate(R.menu.menu_train, menu);
+                mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                        switch (menuItem.getItemId()) {
+                            case R.id.action_add_train:
+                                Intent intent = new Intent();
+                                intent.setClass(MainActivity.this, AddTrainActivity.class);
                                 startActivity(intent);
                         }
                         return false;
@@ -123,6 +175,11 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
                 intent.setClass(MainActivity.this, PersonActivity.class);
                 startActivity(intent);
                 break;
+            case 3:
+                intent = new Intent();
+                intent.setClass(MainActivity.this, Pedometer.class);
+                startActivity(intent);
+                break;
             default:
                 break;
         }
@@ -150,6 +207,21 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerC
                 mToolbar.setTitle(getString(R.string.menu_train));
                 break;
         }
+    }
+
+
+    private class SaveDataFromWear extends TeleportClient.OnSyncDataItemTask{
+        @Override
+        protected void onPostExecute(DataMap result) {
+//            result.get(Constant.STEP)
+//            setData(result.get(Constant.STEP));
+        }
+    }
+
+    private void setData(int steps, int time, int calorie, int maxSpeed, int distance){
+        mWalkDao = DatabaseHelper.getHelper(this).getWalkDao();
+        mWalkDB = new WalkDB(steps,time,calorie,maxSpeed,distance);
+        mWalkDao.create(mWalkDB);
     }
 
 }
